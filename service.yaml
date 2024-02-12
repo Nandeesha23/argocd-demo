@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+  namespace:firstapp
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 8082
+	  targetPort:80
+	  protocol:tcp
+  selector:
+    app: nginx
