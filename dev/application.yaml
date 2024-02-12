@@ -4,18 +4,30 @@ metadata:
   name: myapp-argo-application
   namespace: argocd
 spec:
+  destination:
+    namespace: firstapp
+    server: https://kubernetes.default.svc
   project: default
   source:
+    path: /
     repoURL: https://github.com/Nandeesha23/argocd-demo.git
     targetRevision: HEAD
+<<<<<<< HEAD:dev/application.yaml
     path: argocd-demo
   destination:
     server: https://kubernetes.default.svc
     namespace: firstapp
   syncPolicy:
     synchOptions:
+=======
+  syncPolicy:
+    syncOptions:
+>>>>>>> 8acad94d3a3cc8a2bf842bf2e95ec67bc6665b46:application.yaml
     - CreateNamespace=true
     automated:
       selfHeal: true
       prune: true
+<<<<<<< HEAD:dev/application.yaml
 
+=======
+>>>>>>> 8acad94d3a3cc8a2bf842bf2e95ec67bc6665b46:application.yaml
