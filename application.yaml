@@ -12,12 +12,9 @@ spec:
     path: dev
     repoURL: https://github.com/Nandeesha23/argocd-demo.git
     targetRevision: HEAD
-    path: argocd-demo
   destination:
     server: https://kubernetes.default.svc
     namespace: firstapp
-  syncPolicy:
-    synchOptions:
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
