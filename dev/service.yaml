@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nginx-service
-  namespace:firstapp
+  namespace: firstapp
 spec:
   type: LoadBalancer
   ports:
